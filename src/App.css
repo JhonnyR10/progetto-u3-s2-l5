@@ -36,3 +36,93 @@
     transform: rotate(360deg);
   }
 }
+
+/* -------------CSS GENERAL----------------- */
+.first-color {
+  background: #222831;
+}
+
+.second-color {
+  background: #393e46;
+}
+
+.third-color {
+  background: #f96d00;
+  /* background-image: linear-gradient(to bottom, #393e46, #4f455c, #76465f, #964b4b, #9b602a); */
+}
+
+.fourth-color {
+  background: #f2f2f2;
+}
+/* -------------END CSS GENERAL----------------- */
+.navBar{
+    background: #f96d00;
+  box-shadow: 5px 5px 5px #222831;  
+}
+.homebg{
+  padding-top: 1rem;
+  background-image: linear-gradient(to top, #222831, #262c35, #2a3039, #2f343d, #333841, #3b4053, #484765, #5a4c74, #8f4b82, #c74476, #ee4950, #f96d00);
+}
+.logo{
+  width: 250px;
+  height: 200px;
+}
+.divCarosello{
+  box-shadow: 5px 5px 5px #222831;
+}
+.item{
+  background-color: black;
+  border-radius: 2%;
+}
+.item2{
+  background-image: radial-gradient(circle, #393e46, #5a4c74, #a24981, #e4445f, #f96d00);
+  padding: 1rem 3rem 3rem 3rem;
+    color: white;
+    height: 370px;
+}
+.item2 .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.carouselCard{
+  background-image: radial-gradient(circle, #393e46, #5a4c74, #a24981, #e4445f, #f96d00);
+/* background-image: linear-gradient(to right, #393e46, #4a4f5a, #5b616e, #6e7383, #828598);  */
+ padding: 1rem 3rem 3rem 3rem;
+  color: white;
+  height: 370px;
+}
+.carouselCard .card-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.formSearch{
+  
+  border-bottom: 1px solid #222831;;
+  padding: 1rem;
+  box-shadow: 5px 5px 5px #222831;;
+}
+.containerCard{
+  display: flex;
+  justify-content: center;
+}
+.cardHome{
+  box-shadow: 5px 6px 5px #222831;;
+  padding: 0px;
+  background-color: #282c34;
+  border-radius: 2%;
+}
+.maxWidthHome{
+  max-width: 1000px;
+}
+.roma{
+ max-height: 380px;
+ width: 100%;
+}
+
+.bgfooter{
+  background-color: #222831;
+}
