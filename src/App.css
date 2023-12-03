@@ -126,3 +126,23 @@
 .bgfooter{
   background-color: #222831;
 }
+
+@media (max-width: 575.98px) {
+  .item2 {
+      background-image: radial-gradient(circle, #393e46, #5a4c74, #a24981, #e4445f, #f96d00);
+      padding: 1rem 1rem 1rem 1rem;
+      color: white;
+      height: 450px;
+    }
+        .carouselCard {
+          background-image: radial-gradient(circle, #393e46, #5a4c74, #a24981, #e4445f, #f96d00);
+          /* background-image: linear-gradient(to right, #393e46, #4a4f5a, #5b616e, #6e7383, #828598);  */
+          padding: 1rem 1rem 1rem 1rem;
+          color: white;
+          height: 450px;
+        }
+
+  .adviceSm{
+    padding: 0px !important;
+  }      
+}

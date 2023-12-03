@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import GeoCoord from "./GeoCord";
 import CityWeather from "./CityWeather";
 import { Col, Container, Row } from "react-bootstrap";
@@ -7,6 +7,7 @@ import CityDailyWeather from "./CityDailyWeather";
 import CityFiveDaysWeather from "./CityFiveDaysWeather";
 
 const MySearch = ({ metric }) => {
+  const navigate = useNavigate();
   const [coord, setCoord] = useState({
     lat: "",
     lon: "",
@@ -18,6 +19,7 @@ const MySearch = ({ metric }) => {
   };
 
   const params = useParams();
+  console.log("paramsin", params);
 
   const fetchData = () => {
     fetch(
@@ -39,6 +41,7 @@ const MySearch = ({ metric }) => {
       })
       .catch((error) => {
         console.error("Si è verificato un errore:", error);
+        navigate("/notFoundPage");
       });
   };
   useEffect(() => {

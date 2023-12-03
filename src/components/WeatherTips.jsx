@@ -32,7 +32,7 @@ const WeatherTips = ({ prev, name }) => {
   return (
     <div className="second-color text-white text-center rounded h-100 p-4 opacity-75 d-flex flex-column">
       <p className="third-color rounded">JWW Tips</p>
-      <p className="mt-4 px-4">{advice}</p>
+      <p className="mt-4 px-4 adviceSm">{advice}</p>
     </div>
   );
 };

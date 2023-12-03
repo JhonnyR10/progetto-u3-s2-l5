@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import MySearch from "./components/MySearch";
 import Settings from "./components/Settings";
 import { useState } from "react";
+import NotFoundPage from "./components/NotFoundPage";
 
 function App() {
   const [metric, setMetric] = useState({
@@ -32,6 +33,7 @@ function App() {
               path="/mysearch/:city"
               element={<MySearch metric={metric} />}
             />
+            <Route path="/notFoundPage" element={<NotFoundPage />} />
           </Routes>
         </div>
         <MyFooter />

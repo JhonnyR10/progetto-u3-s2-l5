@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CityWeather from "./CityWeather";
 import logo from "../data/default_transparent_765x625.png";
 import romaImg from "../data/roma3.jpg";
@@ -12,6 +12,7 @@ import CaroselloHome from "./CaroselloHome";
 const Home = ({ metric }) => {
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
+  const [defaultCity, setDefaultCity] = useState("");
   const roma = {
     lat: "41.8933",
     lon: "12.4829",
@@ -28,6 +29,28 @@ const Home = ({ metric }) => {
     lat: "45.4643",
     lon: "9.1895",
   };
+
+  useEffect(() => {
+    switch (`${defaultCity}`) {
+      case "new york":
+        navigate(`/mysearch/${defaultCity}`);
+        break;
+      case "milano":
+        navigate(`/mysearch/${defaultCity}`);
+        break;
+      case "roma":
+        navigate(`/mysearch/${defaultCity}`);
+        break;
+      case "london":
+        navigate(`/mysearch/${defaultCity}`);
+        break;
+      default:
+        break;
+    }
+    // if (`${defaultCity}` === "new york") {
+    //   navigate(`/mysearch/${defaultCity}`);
+    // }
+  }, [defaultCity]);
 
   return (
     <Container fluid className="homebg">
@@ -76,7 +99,12 @@ const Home = ({ metric }) => {
       <div className="containerCard mx-3">
         <Row className="maxWidthHome">
           <Col xs={12} className="mt-3 cardHome">
-            <Row className="h-100">
+            <Row
+              className="h-100"
+              onClick={() => {
+                setDefaultCity("new york");
+              }}
+            >
               <Col xs={4} md={3} lg={2} className="pe-0">
                 <CityWeather
                   coord={newYork}
@@ -86,7 +114,7 @@ const Home = ({ metric }) => {
               </Col>
               <Col className="ps-0">
                 <img
-                  alt="roma"
+                  alt="newYork"
                   src={newYorkImg}
                   className="img-fluid h-100 rounded roma"
                 />
@@ -94,10 +122,15 @@ const Home = ({ metric }) => {
             </Row>
           </Col>
           <Col xs={12} className="mt-3 cardHome">
-            <Row className="h-100">
+            <Row
+              className="h-100"
+              onClick={() => {
+                setDefaultCity("milano");
+              }}
+            >
               <Col className="pe-0">
                 <img
-                  alt="roma"
+                  alt="milano"
                   src={milanoImg}
                   className="img-fluid h-100 rounded roma"
                 />
@@ -108,7 +141,12 @@ const Home = ({ metric }) => {
             </Row>
           </Col>
           <Col xs={12} className="mt-3 cardHome">
-            <Row className="h-100">
+            <Row
+              className="h-100"
+              onClick={() => {
+                setDefaultCity("roma");
+              }}
+            >
               <Col xs={4} md={3} lg={2} className="pe-0">
                 <CityWeather coord={roma} name={"rome"} metric={metric} />
               </Col>
@@ -122,7 +160,12 @@ const Home = ({ metric }) => {
             </Row>
           </Col>
           <Col xs={12} className="mt-3 cardHome">
-            <Row className="h-100">
+            <Row
+              className="h-100"
+              onClick={() => {
+                setDefaultCity("london");
+              }}
+            >
               <Col className="pe-0">
                 <img
                   alt="roma"
