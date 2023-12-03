@@ -23,7 +23,7 @@ const MySearch = ({ metric }) => {
 
   const fetchData = () => {
     fetch(
-      "http://api.openweathermap.org/geo/1.0/direct?q=" +
+      "https://api.openweathermap.org/geo/1.0/direct?q=" +
         params.city +
         "&limit=1&appid=bc3ab04c8573805983bb1d7c5c66e8ae"
     )
