@@ -45,7 +45,9 @@ const MySearch = ({ metric }) => {
       });
   };
   useEffect(() => {
-    fetchData();
+    if (params.city !== " ") {
+      fetchData();
+    }
   }, [params.city]);
   //   <GeoCoord city={params.city} sendCoord={sendCoord} />;
   return (
